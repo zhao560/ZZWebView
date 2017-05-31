@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+    <title>iOS and Js</title>
+    <style type="text/css">
+      * {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <div style="margin-top: 100px">
+      <h1>Test how to use objective-c call js</h1><br/>
+      <div><input type="button" value="call js alert" onclick="callJsAlert()"></div>
+      <br/>
+      <div><input type="button" value="Call js confirm" onclick="callJsConfirm()"></div><br/>
+    </div>
+    <br/>
+    <div>
+      <div><input type="button" value="Call Js prompt " onclick="callJsInput()"></div><br/>
+      <div>Click me here: <a href="http://www.baidu.com">Jump to Baidu</a></div>
+    </div>
+    
+    <br/>
+    <div id="SwiftDiv">
+      <span id="jsParamFuncSpan" style="color: red; font-size: 50px;"></span>
+    </div>
+    
+    <script type="text/javascript">
+      function callJsAlert() {
+        alert('Objective-C call js to show alert');
+        
+        window.webkit.messageHandlers.AppModel.postMessage({key: 'call js alert in js'});
+      }
+    
+    function callJsConfirm() {
+      if (confirm('confirm', 'Objective-C call js to show confirm')) {
+        document.getElementById('jsParamFuncSpan').innerHTML
+        = 'true';
+      } else {
+        document.getElementById('jsParamFuncSpan').innerHTML
+        = 'false';
+      }
+      
+      // AppModel是我们所注入的对象
+      window.webkit.messageHandlers.AppModel.postMessage({key: 'call js confirm in js'});
+    }
+    
+    function callJsInput() {
+      var response = prompt('Hello', 'Please input your name:');
+      document.getElementById('jsParamFuncSpan').innerHTML = response;
+      
+       // AppModel是我们所注入的对象
+      window.webkit.messageHandlers.AppModel.postMessage({key: response});
+    }
+    // oc调用js
+    function alertName(msg) {
+        document.getElementById('jsParamFuncSpan').innerHTML = 'oc 调用了 js ' + msg;
+    }
+      </script>
+  </body>
+</html>
