@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192497322064DEB1003BF342 /* BHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 192497312064DEB1003BF342 /* BHTestViewController.m */; };
 		DCEF9A301EDEA0FE00685692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF9A2F1EDEA0FE00685692 /* main.m */; };
 		DCEF9A331EDEA0FE00685692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF9A321EDEA0FE00685692 /* AppDelegate.m */; };
 		DCEF9A361EDEA0FE00685692 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF9A351EDEA0FE00685692 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		192497302064DEB1003BF342 /* BHTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTestViewController.h; sourceTree = "<group>"; };
+		192497312064DEB1003BF342 /* BHTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTestViewController.m; sourceTree = "<group>"; };
 		DCEF9A2B1EDEA0FE00685692 /* WKWebView 与 JS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WKWebView 与 JS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEF9A2F1EDEA0FE00685692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DCEF9A311EDEA0FE00685692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 				DCEF9A351EDEA0FE00685692 /* ViewController.m */,
 				DCEF9A451EDEA1B700685692 /* ZZWebViewController.h */,
 				DCEF9A461EDEA1B700685692 /* ZZWebViewController.m */,
+				192497302064DEB1003BF342 /* BHTestViewController.h */,
+				192497312064DEB1003BF342 /* BHTestViewController.m */,
 				DCEF9A481EDEB92A00685692 /* test.html */,
 				DCEF9A371EDEA0FE00685692 /* Main.storyboard */,
 				DCEF9A3A1EDEA0FE00685692 /* Assets.xcassets */,
@@ -163,6 +168,7 @@
 				DCEF9A471EDEA1B700685692 /* ZZWebViewController.m in Sources */,
 				DCEF9A331EDEA0FE00685692 /* AppDelegate.m in Sources */,
 				DCEF9A301EDEA0FE00685692 /* main.m in Sources */,
+				192497322064DEB1003BF342 /* BHTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +325,7 @@
 				DCEF9A441EDEA0FE00685692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

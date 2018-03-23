@@ -8,6 +8,7 @@
 
 #import "ZZWebViewController.h"
 #import <WebKit/WebKit.h>
+#import "BHTestViewController.h"
 
 @interface ZZWebViewController () <WKNavigationDelegate,WKScriptMessageHandler,WKUIDelegate>
 @property (nonatomic, strong) WKWebView *webView;
@@ -143,9 +144,8 @@
 
 // oc 调用js
 -(void)clickNavRightBtn {
-    [self.webView evaluateJavaScript:@"alertName('这是WKWebView')" completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        
-    }];
+    BHTestViewController *test = [[BHTestViewController alloc] init];
+    [self.navigationController pushViewController:test animated:YES];
 }
 
 #pragma mark - lazy
